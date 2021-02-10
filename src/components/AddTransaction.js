@@ -1,12 +1,38 @@
 // add ammount and description
 
-const AddTransaction = ({ setAmount, setDescription }) => {
+//uuid
+import { v4 as uuidv4 } from "uuid";
+
+const AddTransaction = ({
+  amount,
+  setAmount,
+  description,
+  setDescription,
+  transactions,
+  setTransactions,
+}) => {
+  //functions
+  const addTransactionHandler = (e) => {
+    e.preventDefault();
+    setTransactions([
+      ...transactions,
+      {
+        amount: parseFloat(amount),
+        description,
+        id: uuidv4(),
+      },
+    ]);
+    setAmount("");
+    setDescription("");
+  };
+
   return (
-    <form className="add-container">
+    <form onSubmit={addTransactionHandler} className="add-container">
       <input
         onChange={(e) => setAmount(e.target.value)}
-        type="tel"
+        type="number"
         name="amount"
+        value={amount}
         placeholder="add amount..."
         required
       />
@@ -14,6 +40,7 @@ const AddTransaction = ({ setAmount, setDescription }) => {
         onChange={(e) => setDescription(e.target.value)}
         type="text"
         name="description"
+        value={description}
         placeholder="add description..."
         required
       />
