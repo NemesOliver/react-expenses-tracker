@@ -1,38 +1,101 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border: 3px solid black;
+  background: white;
+  width: 60rem;
+  height: 90vh;
+}
+
+.app-container header {
+  padding: 2.5rem 0;
+  font-size: 5.4rem;
+  width: 60%;
+  border-bottom: 3px solid black;
+}
+
+.app-container .add-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 60%;
+  margin: 2.5rem 0;
+}
+
+.app-container .add-container input {
+  padding: 1rem 0;
+  margin-bottom: 0.3rem;
+  text-align: center;
+  outline: none;
+  border: 2px solid black;
+}
+
+.app-container .add-container button {
+  font-size: 2.4rem;
+  padding: 0.5rem 0;
+  background: black;
   color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
-.App-link {
-  color: #61dafb;
+.app-container .add-container button:hover {
+  opacity: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app-container .expenses-list {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.app-container .expense {
+  width: 60%;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.app-container .expense .line {
+  background: red;
+  width: 1.5rem;
+  height: 3rem;
+}
+
+.app-container .expense .positive {
+  background: green;
+  width: 1.5rem;
+  height: 3rem;
 }

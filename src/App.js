@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from "react";
+//import components
+import Header from "./components/Header";
+import AddTransaction from "./components/AddTransaction";
+import Transactions from "./components/Transactions";
 
 function App() {
+  //global state
+  const [amount, setAmount] = useState("");
+  const [description, setDescription] = useState("");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <Header />
+      <AddTransaction setAmount={setAmount} setDescription={setDescription} />
+      <Transactions />
     </div>
   );
 }
