@@ -5,16 +5,21 @@ import Header from "./components/Header";
 import AddTransaction from "./components/AddTransaction";
 import Transactions from "./components/Transactions";
 
-
 function App() {
   //global state
   const [amount, setAmount] = useState("");
   const [description, setDescription] = useState("");
   const [transactions, setTransactions] = useState([]);
+  // const [currentAmount, setCurrentAmount] = useState(0);
 
   return (
     <div className="app-container">
-      <Header />
+      <Header
+        amount={amount}
+        transactions={transactions}
+        // currentAmount={currentAmount}
+        // setCurrentAmount={setCurrentAmount}
+      />
       <AddTransaction
         amount={amount}
         setAmount={setAmount}
@@ -23,7 +28,8 @@ function App() {
         transactions={transactions}
         setTransactions={setTransactions}
       />
-      <Transactions />
+  
+      <Transactions setTransactions={setTransactions} transactions={transactions} />
     </div>
   );
 }
