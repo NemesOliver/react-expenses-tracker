@@ -25,23 +25,24 @@ const AddTransaction = ({
     setAmount("");
     setDescription("");
   };
+  //Update current value
 
   return (
     <form onSubmit={addTransactionHandler} className="add-container">
-      <input
-        onChange={(e) => setAmount(e.target.value)}
-        type="number"
-        name="amount"
-        value={amount}
-        placeholder="add amount..."
-        required
-      />
       <input
         onChange={(e) => setDescription(e.target.value)}
         type="text"
         name="description"
         value={description}
         placeholder="add description..."
+        required
+      />
+      <input
+        onChange={(e) => setAmount(e.target.value)}
+        type="number"
+        name="amount"
+        value={amount}
+        placeholder="add amount..."
         required
       />
       <button type="submit">add</button>

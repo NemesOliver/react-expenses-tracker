@@ -1,12 +1,12 @@
 // Header will display total amount
 import { useState } from "react";
 
-const Header = () => {
+const Header = ({currentAmount}) => {
   //total amount
 
   return (
     <header>
-      <h1>£0</h1>
+      <h1>£{currentAmount}</h1>
     </header>
   );
 };

@@ -19,3 +19,7 @@ const Transactions = ({ transactions, setTransactions }) => {
 };
 
 export default Transactions;
+
+// const amounts = transactions.map((trans) => trans.amount);
+// const total = amounts.reduce((acc, item) => (acc += item), 0);
+// setCurrentAmount(total);

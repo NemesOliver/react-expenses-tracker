@@ -10,15 +10,15 @@ function App() {
   const [amount, setAmount] = useState("");
   const [description, setDescription] = useState("");
   const [transactions, setTransactions] = useState([]);
-  // const [currentAmount, setCurrentAmount] = useState(0);
+  const [currentAmount, setCurrentAmount] = useState([0]);
+
 
   return (
     <div className="app-container">
       <Header
         amount={amount}
         transactions={transactions}
-        // currentAmount={currentAmount}
-        // setCurrentAmount={setCurrentAmount}
+        currentAmount={currentAmount}
       />
       <AddTransaction
         amount={amount}
@@ -27,9 +27,14 @@ function App() {
         setDescription={setDescription}
         transactions={transactions}
         setTransactions={setTransactions}
+        currentAmount={currentAmount}
+        setCurrentAmount={setCurrentAmount}
       />
-  
-      <Transactions setTransactions={setTransactions} transactions={transactions} />
+
+      <Transactions
+        setTransactions={setTransactions}
+        transactions={transactions}
+      />
     </div>
   );
 }
