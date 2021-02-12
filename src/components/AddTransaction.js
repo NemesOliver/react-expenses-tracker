@@ -25,7 +25,6 @@ const AddTransaction = ({
     setAmount("");
     setDescription("");
   };
-  //Update current value
 
   return (
     <form onSubmit={addTransactionHandler} className="add-container">

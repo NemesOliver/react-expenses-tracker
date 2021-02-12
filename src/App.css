@@ -89,7 +89,7 @@
   cursor: pointer;
 }
 
-.app-container .expense .line {
+.app-container .expense .negative {
   background: red;
   width: 1.5rem;
   height: 3rem;
