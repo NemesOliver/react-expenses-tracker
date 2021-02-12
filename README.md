@@ -2,9 +2,8 @@
 
 ---
 
-## Add and remove 'transactions', track current amount
+## Add and remove 'transactions', track current balance
 
 ---
 
-- made with react
-- In progress...
+-development build
